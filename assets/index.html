@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sculpting Realities Project1</title>
+    <meta name="description" content="Sculpting Realities project 1 cave">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> 
+    <script>
+      
+    </script>
+  </head>
+   <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+  <body>
+   
+    <a-assets>
+      <video id="artechouse" src="assets/artechouse.mov" autoplay loop="true" sound="autoplay: true"></video>
+      <video id="fern" src="assets/fern.mov" autoplay loop="true"></video>
+      <video id="moon" src="assets/moon.mov" autoplay loop="true"></video>
+      <video id="crystal" src="assets/crystal.mov" autoplay loop="true"></video>
+      <video id="head" src="assets/head.mov" autoplay loop="true"></video>
+      <video id="sparkler" src="assets/sparkler.mov" autoplay loop="true"></video>
+      <video id="sun" src="assets/sun.mov" autoplay loop="true"></video>
+  </a-assets>
+    
+    <a-scene >
+       <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+       <a-entity environment="preset: osiris"></a-entity>
+      
+        <a-asset-item id="spiral" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2Fspiral5.obj?v=1569521757281"> </a-asset-item>
+      <a-asset-item id="rhino" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2Ftop.obj?v=1569357420120"> </a-asset-item>
+      <a-asset-item id="diamond" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2FDiamondsss.obj?v=1569522440897"></a-asset-item>
+   
+<a-entity id="Walls">
+	<a-entity id="ArtechouseWalls">
+	 	<a-sphere id="ArtechouseSphere" material="src:#artechouse" radius="7"  rotation="90 90 150" position="-.5 13.5 -21.5" > </a-sphere>
+	    <a-obj-model id="ArtechouseRhino" src="#rhino" side="double" material="src:#artechouse" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+	</a-entity>
+	<a-entity id="MoonWalls" visible="false">
+	  	<a-obj-model id="MoonRhino" src="#rhino" side="double" material="src:#moon" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+	   	<a-sphere id="MoonSphere" material="src:#moon" radius="7"  rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+	<a-entity id="FernWalls" visible="false">
+		  <a-obj-model id="FernRhino" src="#rhino" side="double" material="src:#fern" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+		  <a-sphere id="FernSphere" material="src:#fern" radius="7" rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+	<a-entity id="CrystalWalls" visible="false">
+		  <a-obj-model id="CrystalRhino" src="#rhino" side="double" material="src:#crystal" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+		  <a-sphere id="CrystalSphere" material="src:#crystal" radius="7" rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+	<a-entity id="HeadWalls" visible="false">
+		<a-obj-model id="HeadRhino" src="#rhino" side="double" material="src:#head" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+		<a-sphere id="HeadSphere" material="src:#head" radius="7" rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+	<a-entity id="SparklerWalls" visible="false">
+		<a-obj-model id="SparklerRhino" src="#rhino" side="double" material="src:#sparkler" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+		<a-sphere id="SparklerSphere" material="src:#sparkler" radius="7" rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+	<a-entity id="SunWalls" visible="false">
+		  <a-obj-model id="SunRhino" src="#rhino" side="double" material="src:#sun" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+		<a-sphere id="SunSphere" material="src:#sun" radius="7" rotation="90 90 150" position="-.5 13.5 -21.5"> </a-sphere>
+	</a-entity>
+</a-entity>
+<!-- 
+   <a-entity id="rhinos">
+      <a-obj-model id="ArtechouseRhino" src="#rhino" side="double" material="src:#artechouse" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
+      <a-obj-model id="FernRhino" src="#rhino" side="double" material="src:#fern" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2" visible="false"></a-obj-model>
+      <a-obj-model id="CrystalRhino" src="#rhino" side="double" material="src:#crystal" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2" visible="false"></a-obj-model>
+      <a-obj-model id="HeadRhino" src="#rhino" side="double" material="src:#head" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2" visible="false"></a-obj-model>
+      <a-obj-model id="SparklerRhino" src="#rhino" side="double" material="src:#sparkler" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2" visible="false"></a-obj-model>
+      <a-obj-model id="SunRhino" src="#rhino" side="double" material="src:#sun" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2" visible="false"></a-obj-model>
+       </a-obj-model>
+   </a-entity>
+ -->
+    <a-entity id="spirals">
+      	<a-obj-model id="back spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 80 0" position="-9.8 0 -17"
+      		event-set__click="_event: click; _target: #inside3; position:7 0 -20"></a-obj-model>
+     	 <a-obj-model id="side left spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 70 0" position="2.5 0 -14.3"
+     	 event-set__click="_event: click; _target: #inside3; position:-9.8 0 -17"></a-obj-model>
+      	<a-obj-model id="side right spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="7 0 -20"
+      	event-set__click="_event: click; _target: #inside3; position:2.5 0 -14.3"></a-obj-model>
+      	 <a-obj-model id="outside spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="0 0 20"
+      	 event-set__click="_event: click; _target: #inside3; position:-9.8 0 -17"></a-obj-model>
+   	</a-entity>
+     
+     <a-entity id="diamonds" position="-.5 0 -21.5"> 
+      <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
+     	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
+     	 	 event-set__down="_event:  mousedown; _target: #MoonWalls; visible: true;"
+     	 	 event-set__up="_event: mouseup; _target: #MoonWalls; visible: false;" > </a-obj-model>
+       <a-obj-model id="FernDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 10 0" position="2 0 0"
+      	 animation= "property:rotation; to: 0 360 0; dur:8000; easing:linear; loop:true"
+      	 	 event-set__down="_event: mousedown; _target: #FernWalls; visible: true;"
+      	 	 event-set__up="_event: mouseup; _target: #FernWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="CrystalDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 60 0" position="0 0 2"
+         	animation= "property:rotation; to: 0 -360 0; dur:3000; easing:linear; loop:true"
+         		 event-set__down="_event: mousedown; _target: #CrystalWalls; visible: true;"
+         		 event-set__up="_event: mouseup; _target: #CrystalWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="HeadDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="0 0 -2"
+         	animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #HeadWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #HeadWalls; visible: false;"> </a-obj-model>
+       <a-entity rotation="0 0 0">
+       <a-obj-model id="SparklerDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 80 0" position="1 0 0"
+       		animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #SparklerWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #SparklerWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="SunDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 90 0" position=".5 0 0"
+         animation= "property:rotation; to: 0 360 0; dur:4000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #SunWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #SunWalls; visible: false;"> </a-obj-model>
+       </a-entity>
+      </a-entity> 
+
+
+      <!-- <a-entity id="diamonds" position="-.5 0 -21.5"> 
+      <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
+     	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
+     	 	 event-set__enter="_event: mouseenter; _target: #MoonWalls; visible: true;"
+     	 	 event-set__leave="_event: mouseleave; _target: #MoonWalls; visible: false;" > </a-obj-model>
+       <a-obj-model id="FernDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 10 0" position="2 0 0"
+      	 animation= "property:rotation; to: 0 360 0; dur:8000; easing:linear; loop:true"
+      	 	 event-set__enter="_event: mouseenter; _target: #FernWalls; visible: true;"
+      	 	 event-set__leave="_event: mouseleave; _target: #FernWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="CrystalDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 60 0" position="0 0 2"
+         	animation= "property:rotation; to: 0 -360 0; dur:3000; easing:linear; loop:true"
+         		 event-set__enter="_event: mouseenter; _target: #CrystalWalls; visible: true;"
+         		 event-set__leave="_event: mouseleave; _target: #CrystalWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="HeadDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="0 0 -2"
+         	animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__enter="_event: mouseenter; _target: #HeadWalls; visible: true;"
+         		event-set__leave="_event: mouseleave; _target: #HeadWalls; visible: false;"> </a-obj-model>
+       <a-entity rotation="0 0 0">
+       <a-obj-model id="SparklerDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 80 0" position="1 0 0"
+       		animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__enter="_event: mouseenter; _target: #SparklerWalls; visible: true;"
+         		event-set__leave="_event: mouseleave; _target: #SparklerWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="SunDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 90 0" position=".5 0 0"
+         animation= "property:rotation; to: 0 360 0; dur:4000; easing:linear; loop:true"
+         		event-set__enter="_event: mouseenter; _target: #SunWalls; visible: true;"
+         		event-set__leave="_event: mouseleave; _target: #SunWalls; visible: false;"> </a-obj-model>
+       </a-entity>
+      </a-entity> 
+ -->
+      <a-sky color="lightblue"> </a-sky>
+     
+ <a-entity rotation="90 90 150" position="-.5 13.5 -21.5">
+     <!--  <a-sphere id="FernSphere" material="src:#fern" radius="7"  rotiation="90 90 90"visible="false"> </a-sphere> -->
+     <!--  <a-sphere id="CrystalSphere" material="src:#crystal" radius="7"  rotiation="90 90 90" visible="false"> </a-sphere> -->
+    <!--   <a-sphere id="HeadSphere" material="src:#head" radius="7"  rotiation="90 90 90" visible="false"> </a-sphere> -->
+      <!-- <a-sphere id="SparklerSphere" material="src:#sparkler" radius="7"  rotiation="90 90 90" visible="false"> </a-sphere>
+      <a-sphere id="SunSphere" material="src:#sun" radius="7"  rotiation="90 90 90" visible="false"> </a-sphere> -->
+        <a-entity id="linked lights">
+          <a-light light="type: spot" position="16 10 25" intensity="1" scale="1 4 1"></a-light>
+           <a-light light="intensity: 1.01; type: spot; angle: 39.66" position="-27.87332 -6.41479 49.39787" intensity="2" rotation="0 -21.16 0.31"></a-light>
+	<a-light light="intensity: 1.17; type: spot; angle: 36.56; penumbra: 0.1"  position="0.30433 19.49506 22.95671" intensity="2" rotation="-60 -42.97 -1.65"></a-light>
+        </a-entity>  
+
+</a-entity>
+      
+    
+      
+  <a-entity id="lights">
+        <a-light target="outside spiral" scale=".5 .5 .5" light="type: spot" position="0 1 23" intensity="1"></a-light>
+        </a-entity>
+        
+<a-plane id="door" length="4" width="4" position="6.11329 0.9029 -15.89825" material="" geometry="width: 5; height: 6" rotation="1.22 29.999999999999996" color="pink" opacity="0.2" side="back" visible="false" 
+animation="property:  opacity;  to:  0.2;  dur:  6000;  easing:  linear;"
+	event-set__enter="_event: mouseenter; visible: true"
+    event-set__leave="_event: mouseleave; visible: false"
+    event-set__click="_event: click; _target:#inside3; position:0 0 20"></a-plane>
+
+
+
+ <!-- event-set__click="_event: click; _target: #inside3; position:0 0 20; material.color:pink; transparency:0.6" -->
+      
+<!--       <a-sphere  mirror radius="30" color="green" position="0 1 -60" rotation="0 0 0" side="double" resolution="128" animation="property:position; to: -1 70 -10; dur:5000; easing:linear;  loop:true startEvents:mouseenter"> </a-sphere>
+      <a-sphere mirror animation="property:position; to: -1 5 -3; dur:5000; easing:linear;  loop:true startEvents:mouseenter" position="-1 3 -5"></a-sphere> -->
+       
+      
+      
+      <a-entity id="inside3" rotation="0 0 0" position="0 0 20">
+       <a-camera rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+      </a-entity>   
+
+
+      
+<!--       <a-entity id="inside 1" rotation="0 0 0" position="-9.8 0 -17">
+       <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+      </a-entity>          -->
+
+<!--           
+      <a-entity id="inside 2" rotation="0 0 0" position="7 0 -20">
+       <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+      </a-entity>   
+       -->
+      
+              
+     <!--  <a-entity id="inside2" rotation="0 0 0" position="2.5 0 -14.3">
+       <a-camera id="camera" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+      </a-entity>  
+       -->
+<!--      <a-camera camera="" position="-7.5 3 -21.5" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera> -->
+    </a-scene>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
