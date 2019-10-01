@@ -180,11 +180,16 @@ animation="property:  opacity;  to:  0.2;  dur:  6000;  easing:  linear;"
       
       
       <a-entity id="inside3" rotation="0 0 0" position="0 0 20">
-       <a-camera rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+       <a-camera rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="fuse: true"></a-cursor> </a-camera>
       </a-entity>   
 
 
-      
+    <!--   	<a-entity position="0 0 -3"
+                geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;"
+                material="color: cyan; shader: flat"
+                cursor="maxDistance: 30; fuse: true">
+ -->
+
 <!--       <a-entity id="inside 1" rotation="0 0 0" position="-9.8 0 -17">
        <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
       </a-entity>          -->
