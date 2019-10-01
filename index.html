@@ -73,10 +73,13 @@
  -->
     <a-entity id="spirals">
       	<a-obj-model id="back spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 80 0" position="-9.8 0 -17"
-      		event-set__click="event: click; _target:#camera; position: 0 0 20"></a-obj-model>
-     	 <a-obj-model id="side left spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 70 0" position="2.5 0 -14.3"></a-obj-model>
-      	<a-obj-model id="side right spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="7 0 -20"></a-obj-model>
-      	 <a-obj-model id="outside spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="0 0 20"></a-obj-model>
+      		event-set__click="_event: click; _target: #inside3; position:7 0 -20"></a-obj-model>
+     	 <a-obj-model id="side left spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 70 0" position="2.5 0 -14.3"
+     	 event-set__click="_event: click; _target: #inside3; position:-9.8 0 -17"></a-obj-model>
+      	<a-obj-model id="side right spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="7 0 -20"
+      	event-set__click="_event: click; _target: #inside3; position:2.5 0 -14.3"></a-obj-model>
+      	 <a-obj-model id="outside spiral" src="#spiral" material="src:#artechouse" scale=".25 .25 .25" side="double" rotation="0 110 0" position="0 0 20"
+      	 event-set__click="_event: click; _target: #inside3; position:-9.8 0 -17"></a-obj-model>
    	</a-entity>
      
      <a-entity id="diamonds" position="-.5 0 -21.5"> 
@@ -101,10 +104,6 @@
        		animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
          		event-set__enter="_event: mouseenter; _target: #SparklerWalls; visible: true;"
          		event-set__leave="_event: mouseleave; _target: #SparklerWalls; visible: false;"> </a-obj-model>
-         <a-obj-model id="ArtechouseDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-1 0 0"
-         	animation= "property:rotation; to: 0 -360 0; dur:7000; easing:linear; loop:true"
-         		event-set__enter="_event: mouseenter; _target: #ArtechouseWalls; visible: true;"
-         		event-set__leave="_event: mouseleave; _target: #ArtechouseWalls; visible: true;"> </a-obj-model>
          <a-obj-model id="SunDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 90 0" position=".5 0 0"
          animation= "property:rotation; to: 0 360 0; dur:4000; easing:linear; loop:true"
          		event-set__enter="_event: mouseenter; _target: #SunWalls; visible: true;"
@@ -112,27 +111,6 @@
        </a-entity>
       </a-entity> 
 
-
-
-
-      <!-- 
-     	 	  <a-obj-model id="moon diamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
-     	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
-     	 	 event-set__click="_event: click; _target: #MoonRhino; visible: true"
-     	 	 event-set__click="event: click; _target:#ArtechouseRhino; visible:false"
-     	 	     event-set__click="event: click; _target:#ArtechouseSphere; visible:false" 
-     	 	     event-set__click="_target: _target:#ArtechouseSphere; visible:false"> </a-obj-model> -->
-
-
-
-<!--       
-
-       <a-box  id="box" color="blue" position=" 0 1 -4" rotation="0 -60 0"
-             event-set__mouseenter= "material.color: red" 
-             event-set__mouseleave="material.color: blue">
-             
-      </a-box> -->
-      
       <a-sky color="lightblue"> </a-sky>
      
  <a-entity rotation="90 90 150" position="-.5 13.5 -21.5">
@@ -166,9 +144,9 @@
        
       
       
-<!--       <a-entity id="oustide 1" rotation="0 0 0" position="0 0 20">
-       <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
-      </a-entity>    -->
+      <a-entity id="inside3" rotation="0 0 0" position="0 0 20">
+       <a-camera rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
+      </a-entity>   
       
 <!--       <a-entity id="inside 1" rotation="0 0 0" position="-9.8 0 -17">
        <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
@@ -181,10 +159,10 @@
        -->
       
               
-      <a-entity id="inside 3" rotation="0 0 0" position="2.5 0 -14.3">
+     <!--  <a-entity id="inside2" rotation="0 0 0" position="2.5 0 -14.3">
        <a-camera id="camera" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
       </a-entity>  
-      
+       -->
 <!--      <a-camera camera="" position="-7.5 3 -21.5" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera> -->
     </a-scene>
   </body>
