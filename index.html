@@ -85,6 +85,36 @@
      <a-entity id="diamonds" position="-.5 0 -21.5"> 
       <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
      	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
+     	 	 event-set__down="_event:  mousedown; _target: #MoonWalls; visible: true;"
+     	 	 event-set__up="_event: mouseup; _target: #MoonWalls; visible: false;" > </a-obj-model>
+       <a-obj-model id="FernDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 10 0" position="2 0 0"
+      	 animation= "property:rotation; to: 0 360 0; dur:8000; easing:linear; loop:true"
+      	 	 event-set__down="_event: mousedown; _target: #FernWalls; visible: true;"
+      	 	 event-set__up="_event: mouseup; _target: #FernWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="CrystalDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 60 0" position="0 0 2"
+         	animation= "property:rotation; to: 0 -360 0; dur:3000; easing:linear; loop:true"
+         		 event-set__down="_event: mousedown; _target: #CrystalWalls; visible: true;"
+         		 event-set__up="_event: mouseup; _target: #CrystalWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="HeadDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="0 0 -2"
+         	animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #HeadWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #HeadWalls; visible: false;"> </a-obj-model>
+       <a-entity rotation="0 0 0">
+       <a-obj-model id="SparklerDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 80 0" position="1 0 0"
+       		animation= "property:rotation; to: 0 360 0; dur:5000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #SparklerWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #SparklerWalls; visible: false;"> </a-obj-model>
+         <a-obj-model id="SunDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 90 0" position=".5 0 0"
+         animation= "property:rotation; to: 0 360 0; dur:4000; easing:linear; loop:true"
+         		event-set__down="_event: mousedown; _target: #SunWalls; visible: true;"
+         		event-set__up="_event: mouseup; _target: #SunWalls; visible: false;"> </a-obj-model>
+       </a-entity>
+      </a-entity> 
+
+
+      <!-- <a-entity id="diamonds" position="-.5 0 -21.5"> 
+      <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
+     	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
      	 	 event-set__enter="_event: mouseenter; _target: #MoonWalls; visible: true;"
      	 	 event-set__leave="_event: mouseleave; _target: #MoonWalls; visible: false;" > </a-obj-model>
        <a-obj-model id="FernDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 10 0" position="2 0 0"
@@ -110,7 +140,7 @@
          		event-set__leave="_event: mouseleave; _target: #SunWalls; visible: false;"> </a-obj-model>
        </a-entity>
       </a-entity> 
-
+ -->
       <a-sky color="lightblue"> </a-sky>
      
  <a-entity rotation="90 90 150" position="-.5 13.5 -21.5">
@@ -133,11 +163,15 @@
         <a-light target="outside spiral" scale=".5 .5 .5" light="type: spot" position="0 1 23" intensity="1"></a-light>
         </a-entity>
         
+<a-plane id="door" length="4" width="4" position="6.11329 0.9029 -15.89825" material="" geometry="width: 5; height: 6" rotation="1.22 29.999999999999996" color="pink" opacity="0.2" side="back" visible="false" 
+animation="property:  opacity;  to:  0.2;  dur:  6000;  easing:  linear;"
+	event-set__enter="_event: mouseenter; visible: true"
+    event-set__leave="_event: mouseleave; visible: false"
+    event-set__click="_event: click; _target:#inside3; position:0 0 20"></a-plane>
 
 
 
-      
-
+ <!-- event-set__click="_event: click; _target: #inside3; position:0 0 20; material.color:pink; transparency:0.6" -->
       
 <!--       <a-sphere  mirror radius="30" color="green" position="0 1 -60" rotation="0 0 0" side="double" resolution="128" animation="property:position; to: -1 70 -10; dur:5000; easing:linear;  loop:true startEvents:mouseenter"> </a-sphere>
       <a-sphere mirror animation="property:position; to: -1 5 -3; dur:5000; easing:linear;  loop:true startEvents:mouseenter" position="-1 3 -5"></a-sphere> -->
@@ -147,6 +181,8 @@
       <a-entity id="inside3" rotation="0 0 0" position="0 0 20">
        <a-camera rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
       </a-entity>   
+
+
       
 <!--       <a-entity id="inside 1" rotation="0 0 0" position="-9.8 0 -17">
        <a-camera camera="" rotation="0 0 0" look-controls="" wasd-controls="acceleration: 200" data-aframe-inspector-original-camera=""> <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor> </a-camera>
