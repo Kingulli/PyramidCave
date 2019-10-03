@@ -14,7 +14,7 @@
   <body>
    
     <a-assets>
-       <audio id="Endless" src="02Endless.mp3" preload="auto"></audio>
+       <video id="Endless" src="assets/Endless.mp4" autoplay loop="true"></video>
       <video id="artechouse" src="assets/artechouse.mov" autoplay loop="true" sound="autoplay: true"></video>
       <video id="fern" src="assets/fern.mov" autoplay loop="true"></video>
       <video id="moon" src="assets/moon.mov" autoplay loop="true"></video>
@@ -30,7 +30,9 @@
       
         <a-asset-item id="spiral" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2Fspiral5.obj?v=1569521757281"> </a-asset-item>
       <a-asset-item id="rhino" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2Ftop.obj?v=1569357420120"> </a-asset-item>
-      <a-asset-item id="diamond" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2FDiamondsss.obj?v=1569522440897"></a-asset-item
+      <a-asset-item id="diamond" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2FDiamondsss.obj?v=1569522440897"></a-asset-item>
+
+      <a-box visible="false" material="src:#Endless"></a-box>
 
 <a-entity id="Walls" sound="#Endless"></a-entity>
 	<a-entity id="ArtechouseWalls">
