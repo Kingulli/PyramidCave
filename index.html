@@ -14,7 +14,7 @@
   <body>
    
     <a-assets>
-       <video id="Endless" src="assets/Endless.mp4" autoplay loop="true"></video>
+       <video id="end" src="assets/end.mp4" autoplay loop="true"></video>
       <video id="artechouse" src="assets/artechouse.mov" autoplay loop="true" sound="autoplay: true"></video>
       <video id="fern" src="assets/fern.mov" autoplay loop="true"></video>
       <video id="moon" src="assets/moon.mov" autoplay loop="true"></video>
@@ -32,7 +32,7 @@
       <a-asset-item id="rhino" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2Ftop.obj?v=1569357420120"> </a-asset-item>
       <a-asset-item id="diamond" src="https://cdn.glitch.com/e09de51a-7d58-4c58-8755-6b779a1cf255%2FDiamondsss.obj?v=1569522440897"></a-asset-item>
 
-      <a-box visible="true" material="src:#Endless"></a-box>
+      <a-box visible="true" material="src:#end"></a-box>
 
 <a-entity id="Walls"></a-entity>
 	<a-entity id="ArtechouseWalls">
@@ -107,7 +107,7 @@
 
 
       <a-entity id="diamonds" position="-.5 0 -21.5"> 
-      <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="-2 0 0" 
+      <a-obj-model id="MoonDiamond" src="#diamond" scale="0.1 0.1 0.1" mirror color="white" rotation="0 50 0" position="2.5 4 -14.3" 
      	 animation= "property:rotation; to: 0 -360 0; dur:6000; easing:linear; loop:true"
      	 	 event-set__enter="_event: mouseenter; _target: #MoonWalls; visible: true;"
      	 	 event-set__leave="_event: mouseleave; _target: #MoonWalls; visible: false;" > </a-obj-model>
