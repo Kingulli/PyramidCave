@@ -11,7 +11,7 @@
   </head>
   <meta name="apple-mobile-web-app-capable" content="yes">
    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
-   <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script> 
+  <!--  <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>  -->
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script> 
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script> 
   <body>
@@ -37,30 +37,70 @@
 
       <a-box  id="sound" visible="false" material="src:#end"></a-box>
 
- <a-curve id="track1" dur="5000">
-      <a-curve-point position="-.5 13.5 -21.5"></a-curve-point>
-      <a-curve-point position="-.5 25 -21.5"></a-curve-point>
-      <a-curve-point position="0 20 -15"></a-curve-point>
-      <a-curve-point position="0 1 -8"></a-curve-point>
-      <a-curve-point position="0 2 -2"></a-curve-point>
-       <a-curve-point position="0 1 10"></a-curve-point>
-      <a-curve-point position="0 1 18"></a-curve-point>
-      <a-curve-point position="0 1 17"></a-curve-point>
-      <a-curve-point position="0 1 17"></a-curve-point>
-      <a-curve-point position="0 1 17.3"></a-curve-point>
-      <a-curve-point position="0 1 17.6"></a-curve-point>
-      <a-curve-point position="0 1 17.9"></a-curve-point>
-       <a-curve-point position="0 -1 18"></a-curve-point>
-    </a-curve>
-    
-     <a-sphere mirror id="on" radius=".2" color="black" alongpath="curve: #track1; dur:9000; delay: 3000"></a-sphere>
+ <a-curve id="track1" dur="9000">
+      <a-curve-point position="-.5 13.5 -21.5" dur="9000"></a-curve-point>
+      <a-curve-point position="-.5 25 -21.5" dur="9000"></a-curve-point>
+      <a-curve-point position="0 20 -15 " dur="9000"></a-curve-point>
+      <a-curve-point position="0 2 -8" dur="9000"></a-curve-point>
+      <a-curve-point position="0 2 -2" dur="9000"></a-curve-point>
+      <a-curve-point position="0 2 8" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 12 " dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 16" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 17" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 18.5" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point>      
+      <a-curve-point position="0 1 19" dur="9000"></a-curve-point> 
+      <a-curve-point position="0 .9 19" dur="9000"></a-curve-point>          
+      <a-curve-point position="0 .8 19" dur="9000"></a-curve-point>
+        <a-curve-point position="0 .7 19" dur="9000"></a-curve-point>
+        <a-curve-point position="0 .6 19" dur="9000"></a-curve-point>
+         <a-curve-point position="0 .5 19" dur="9000"></a-curve-point>
+      <a-curve-point position="0 .4 19.3" dur="9000"></a-curve-point>
+        <a-curve-point position="0 .3 19.3" dur="9000"></a-curve-point>
+        <a-curve-point position="0 .2 19.3" dur="9000"></a-curve-point>
+      <a-curve-point position="0 .1 19.6" dur="9000"></a-curve-point>
+      <a-curve-point position="0 0 19.6" dur="9000"></a-curve-point>
+       <a-curve-point position="0 -.1 19.6" dur="9000"></a-curve-point>
+         <a-curve-point position="0 -.2 19.6" dur="9000"></a-curve-point>
+         <a-curve-point position="0 -.3 19.6" dur="9000"></a-curve-point>
+           <a-curve-point position="0 -.4 19.6" dur="9000"></a-curve-point>
+             <a-curve-point position="0 -.5 19.6" dur="9000"></a-curve-point>
+               <a-curve-point position="0 -.6 19.6" dur="9000"></a-curve-point>
+                 <a-curve-point position="0 -.7 19.6" dur="9000"></a-curve-point>
+                   <a-curve-point position="0 -.8 19.6" dur="9000"></a-curve-point>
+                     <a-curve-point position="0 -.9 19.6" dur="9000"></a-curve-point>
+      <a-curve-point position="0 -1 20" dur="9000"></a-curve-point>
+</a-curve>
+
+<a-entity id="test" position="0 -1 0">
+     <a-sphere id="instruction" 
+     mirror id="on" radius=".2" color="black" moveonpath="false" movingstarted="false"></a-sphere>
+</a-entity>
+
+    <!--  <a-sphere mirror id="test" radius=".2" color="black" alongpath="curve: #track1; dur:9000; resetonplay: false; movingstarted: false"></a-sphere>
+
+ -->
+<!-- <a-entity id="test" property="movingstarted" alongpath="curve: #track1; dur: 90000; resetonplay: false" dur="10000" position="0 -1 20">
+     <a-sphere mirror="" id="on" radius=".2" color="black" moveonpath="false" dur="9000" material="" geometry=""></a-sphere>
+</a-entity> -->
 
 
 
-
-<a-entity id="Walls"></a-entity>
-	<a-entity id="ArtechouseWalls">
-	 	<a-sphere id="ArtechouseSphere" material="src:#artechouse" radius="7"  rotation="90 90 150" position="-.5 13.5 -21.5" > </a-sphere>
+<a-entity id="Walls" >
+	<a-entity id="ArtechouseWalls"
+    event-set__click="_event: click; _target: #test; property: movingstarted; dur:90000; alongpath: curve: #track1;">
+	 	<a-sphere id="ArtechouseSphere" material="src:#artechouse" radius="7"  rotation="90 90 150" position="-.5 13.5 -21.5"  > </a-sphere>
 	    <a-obj-model id="ArtechouseRhino" src="#rhino" side="double" material="src:#artechouse" color="#878a7a" position="0 -2.5 -20" rotation="-.6 -40 8.8" scale="1 2.5 2"></a-obj-model>
 	</a-entity>
 	<a-entity id="MoonWalls" visible="false">
